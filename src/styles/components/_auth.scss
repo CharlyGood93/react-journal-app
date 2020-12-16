@@ -46,11 +46,12 @@
     width: 100%;
 }
 
-.auth__alter-error {
+.auth__alert-error {
     background-color: red;
     border-radius: 5px;
     color: #FFF;
     justify-content: center;
     margin-bottom: 10px;
     padding: 5px;
+    text-align: center;
 }
