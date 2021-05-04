@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const NothinSelectedScreen = () => {
+export const NothingSelectedScreen = () => {
     return (
         <div className="nothing__main-content">
             <p>Select something or create an entry!</p>

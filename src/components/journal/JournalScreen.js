@@ -1,15 +1,23 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { NotesScreen } from '../notes/NotesScreen';
+import { NothingSelectedScreen } from './NothingSelectedScreen';
 import { SidebarScreen } from './SidebarScreen';
-// import { NothinSelectedScreen } from './NothinSelectedScreen';
 
 export const JournalScreen = () => {
+
+    const { active } = useSelector(state => state.notes);
+
+
     return (
-        <div className="journal__main-content">
+        <div className="journal__main-content animate__animated animate__fadeIn animate_faster">
             <SidebarScreen />
             <main>
-                {/* <NothinSelectedScreen /> */}
-                <NotesScreen />
+                {
+                    (active)
+                        ? (<NotesScreen />)
+                        : (<NothingSelectedScreen />)
+                }
             </main>
         </div>
     )
