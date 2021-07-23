@@ -9,6 +9,5 @@ export const loadNotes = async (uid) => {
             ...childSnap.data()
         })
     });
-    console.log(notes);
     return notes;
 }
